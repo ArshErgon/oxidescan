@@ -1,0 +1,21 @@
+[package]
+name = "oxidescan"
+version = "1.0.0"
+authors = ["arshergon", "arshergon@gmail.com"]
+edition = "2024"
+description = "A fast, human-friendly Rust code health checker that runs in seconds and tells you what’s risky, what’s slow, and what’s messy—so you can ship with confidence."
+license = "MIT"
+repository = "https://github.com/ArshErgon/"
+readme = "README.md"
+keywords = ["cli", "code-analyzer", "rust", "lint", "static-analysis", "cargo", "compiler", "rustc"]
+categories = ["command-line-utilities", "development-tools"]
+
+
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+syn = { version = "2.0", features = ["full", "visit","extra-traits"] }
+walkdir = "2.5"
+indicatif = "0.17"
+colored = "2.1"
+proc-macro2 = { version = "1.0.103", features = ["span-locations", "nightly"] }
